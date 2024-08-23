@@ -4,9 +4,11 @@ import random
 names = ["Milad", "Behdad", "Parsa", "Saeb", "Taher"]
 
 #Random word generator
-selected_name = random.choice(names)
+selected_name = random.choice(names).lower()
 guessed_count = len(selected_name)
 guessed_list = ['-'] * len(selected_name)
+current_guess = " ".join(guessed_list)
+print(current_guess)
 while guessed_count > 0:
     guessed_char = input("Enter a character:  \n")
     
